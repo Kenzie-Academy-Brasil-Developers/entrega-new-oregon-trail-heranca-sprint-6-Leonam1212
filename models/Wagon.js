@@ -6,6 +6,7 @@ class Wagon {
    
     }
     getAvailableSeatCount () {
+      
         return this.capacity - this.passengers.length
     }
 
@@ -24,8 +25,8 @@ class Wagon {
     }
     
     totalFood () {
-        console.log(this.passengers)
-        return this.passengers.reduce((acc, viajante) => acc + viajante.food, 0)
+
+        return this.passengers.reduce((acc, viajante) => acc + Number(viajante.food), 0)
         
     }
 

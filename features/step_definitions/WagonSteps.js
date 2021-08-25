@@ -26,12 +26,14 @@ Given('o passageiro de nome <name> que está com saúde <isHealthy> e tem <food>
     data.forEach(passenger => {
         let values          = Object.values(passenger)
         let newPassenger    = new Traveler(...values);
+     
         passengers.push(newPassenger);
     })
 });
 
 Given('a entrada do passageiro {string}', function (string) {
     let comingAboard = passengers.find(passenger => passenger.name === string);
+    
     carroca.join(comingAboard);
 });
 
